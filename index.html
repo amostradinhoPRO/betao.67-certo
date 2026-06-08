@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Betão.67 — Apostas Esportivas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&family=Barlow+Condensed:wght@700;900&display=swap" rel="stylesheet" />
+</head>
+<body class="light-mode">
+
+  <!-- HEADER / NAV -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">
+        <span class="logo-bet">BET</span><span class="logo-ao">ÃO</span><span class="logo-num">.67</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-item active">Início</a></li>
+        <li><a href="#jogos" class="nav-item">Jogos</a></li>
+        <li><a href="#sobre" class="nav-item">Sobre</a></li>
+        <li><a href="#contato" class="nav-item">Contato</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-toggle-dark" id="darkToggle" title="Alternar modo escuro">🌙</button>
+        <button class="btn-entrar">Entrar</button>
+        <button class="btn-cadastro">Cadastrar</button>
+        <button class="hamburger" id="hamburger">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-tag">🔥 Apostas ao Vivo Disponíveis</p>
+      <h1 class="hero-title">
+        JOGUE<br/>
+        <span class="hero-highlight">COM INTELIGÊNCIA</span>
+      </h1>
+      <p class="hero-sub">
+        As melhores odds do mercado. Futebol, basquete, tênis e muito mais.<br/>
+        Cadastre-se e ganhe <strong>R$ 50 de bônus</strong> na primeira aposta!
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="abrirModal()">Apostar Agora</button>
+        <button class="btn-secondary">Ver Odds ao Vivo</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="1200">0</span><span>Jogos/mês</span></div>
+        <div class="stat"><span class="stat-num" data-target="50000">0</span><span>Usuários</span></div>
+        <div class="stat"><span class="stat-num" data-target="98">0</span><span>% Pagamentos</span></div>
+      </div>
+    </div>
+    <div class="hero-ball">⚽</div>
+  </section>
+
+  <!-- JOGOS AO VIVO -->
+  <section class="jogos" id="jogos">
+    <div class="container">
+      <h2 class="section-title">🔴 <span>Jogos em Destaque</span></h2>
+      <div class="filtros">
+        <button class="filtro ativo" data-filtro="todos">Todos</button>
+        <button class="filtro" data-filtro="futebol">⚽ Futebol</button>
+        <button class="filtro" data-filtro="basquete">🏀 Basquete</button>
+        <button class="filtro" data-filtro="tenis">🎾 Tênis</button>
+      </div>
+      <div class="cards-grid" id="cardsGrid">
+        <!-- gerado pelo JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container sobre-inner">
+      <div class="sobre-texto">
+        <h2 class="section-title">Sobre o <span>Betão.67</span></h2>
+        <p>Somos uma plataforma de apostas esportivas criada para oferecer a melhor experiência ao apostador brasileiro. Com odds competitivas, pagamentos rápidos e suporte 24h.</p>
+        <ul class="sobre-lista">
+          <li>✅ Licença regulamentada</li>
+          <li>✅ Saque em até 24 horas</li>
+          <li>✅ Suporte via WhatsApp e chat</li>
+          <li>✅ Odds atualizadas em tempo real</li>
+        </ul>
+      </div>
+      <div class="sobre-imagem">
+        <div class="campo-visual">
+          <div class="campo-linha"></div>
+          <div class="campo-circulo"></div>
+          <span class="campo-emoji">🏟️</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <h2 class="section-title">Entre em <span>Contato</span></h2>
+      <form class="form-contato" id="formContato">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" placeholder="Seu nome" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="seu@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="assunto">Assunto</label>
+          <select id="assunto">
+            <option value="">Selecione...</option>
+            <option>Dúvida sobre aposta</option>
+            <option>Problemas com saque</option>
+            <option>Bônus e promoções</option>
+            <option>Outros</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar Mensagem</button>
+        <p class="form-feedback" id="formFeedback"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">
+        <span class="logo-bet">BET</span><span class="logo-ao">ÃO</span><span class="logo-num">.67</span>
+      </div>
+      <p>© 2025 Betão.67 — Site criado para fins educacionais.<br/>Aposte com responsabilidade. Proibido para menores de 18 anos.</p>
+      <p class="footer-aviso">⚠️ +18 | Jogo responsável</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <button class="modal-close" onclick="fecharModal()">✕</button>
+      <h3>🎯 Fazer Aposta</h3>
+      <p>Selecione um jogo na grade acima e clique em <strong>"Apostar"</strong> para adicionar ao seu boletim.</p>
+      <div class="bilhete" id="bilhete">
+        <p class="bilhete-vazio">Nenhuma aposta selecionada.</p>
+      </div>
+      <div class="modal-valor">
+        <label>Valor da aposta (R$)</label>
+        <input type="number" id="valorAposta" min="5" max="1000" value="20" />
+      </div>
+      <button class="btn-primary" onclick="confirmarAposta()">Confirmar Aposta</button>
+      <p id="modalMsg" class="form-feedback"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
